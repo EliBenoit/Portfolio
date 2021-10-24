@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "text";
+  src: url(../fonts/Nunito-Regular.ttf);
+}
+
+@font-face {
+  font-family: "title";
+  src: url(../fonts/Besom-free-font.otf);
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  font-family: "title";
+  font-size: 2em;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+a:before, a:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #000;
+  opacity: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 10px);
+          transform: translate(-50%, 10px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+a:before {
+  width: 90%;
+  bottom: 0;
+}
+
+a:after {
+  width: 60%;
+  bottom: -7px;
+}
+
+a:hover:before, a:hover:after {
+  -webkit-transform: translate(-50%, 0px);
+          transform: translate(-50%, 0px);
+  opacity: 1;
+}
+/*# sourceMappingURL=link.css.map */

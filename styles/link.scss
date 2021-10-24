@@ -1,0 +1,41 @@
+@import 'variables.scss';
+
+a {
+    text-decoration: none;
+    color:$mainColor;
+    position: relative;
+    font-family: "title";
+    font-size: 2em;
+    padding-left: 15px;
+    padding-right: 15px;
+
+
+    //POSITION LINES
+    &:before, &:after{
+        content: "";
+        position: absolute;
+        height: 2px;
+        background: $mainColor;
+        opacity: 0;
+        left: 50%;
+        transform: translate(-50%, 10px);
+        //CREATE ANIMATION
+        transition: all 0.2s ease-in-out;
+    }
+        
+    &:before{
+       width: 90%;
+       bottom:0;
+    }
+    &:after{
+        width: 60%;
+        bottom:-7px;
+    }
+
+    //POSITION ANIMATION HOVER
+    &:hover:before, &:hover:after{
+        transform: translate(-50%, 0px);
+        opacity:1;
+    }
+}
+

@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "text";
+  src: url(../fonts/Nunito-Regular.ttf);
+}
+
+@font-face {
+  font-family: "title";
+  src: url(../fonts/Besom-free-font.otf);
+}
+
+.bg {
+  background: url("../../imgs/bg/fond.jpg");
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+  mix-blend-mode: overlay;
+  opacity: 0.45;
+  -webkit-animation: animation 100s linear infinite;
+          animation: animation 100s linear infinite;
+}
+
+@-webkit-keyframes animation {
+  100% {
+    background-position: 0px -3000px;
+  }
+}
+
+@keyframes animation {
+  100% {
+    background-position: 0px -3000px;
+  }
+}
+/*# sourceMappingURL=background.css.map */
